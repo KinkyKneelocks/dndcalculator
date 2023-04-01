@@ -1,7 +1,7 @@
 {
   "name": "dndcalc",
   "version": "0.1.0",
-  "homepage": "https://kinkykneelocks.github.io/dndcalculator/",
+  "homepage": "https://kinkykneelocks.github.io/dndcalculator",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
