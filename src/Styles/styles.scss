@@ -1,0 +1,31 @@
+@import './Components/variables';
+@import './Components/buttons';
+@import './Components/diceinput';
+@import './Components/baseData';
+
+body {
+    margin: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $bgcolor;
+    color: $fontcolor;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .addNewRow {
+    cursor: pointer;
+    transition: $transition;
+    color: $fontcolor;
+    width: max-content;
+
+    &:hover {
+      color: $fontcolor-hover
+    }
+  }

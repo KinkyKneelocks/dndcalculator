@@ -1,0 +1,475 @@
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.buttons__element {
+  margin: 0.5em 0.2em;
+  border: solid 1px #E6E1E5;
+  padding: 0.35em 0.75em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  font-weight: bold;
+}
+
+.buttons__element:hover {
+  border: solid 1px #e6e1e588;
+  color: #e6e1e588;
+}
+
+.buttons__element--active {
+  background: #4F378B;
+  border: solid 1px #4F378B;
+}
+
+.buttons__element--active:hover {
+  border: solid 1px #4f378b7c;
+  background: #4f378b7c;
+  color: #E6E1E5;
+}
+
+.buttons__element--halfactive {
+  border: solid 1px #4F378B;
+  background: -webkit-gradient(linear, left top, right top, from(#4F378B), color-stop(75%, #1C1B1F));
+  background: linear-gradient(90deg, #4F378B 0%, #1C1B1F 75%);
+}
+
+.buttons__element--halfactive:hover {
+  border: solid 1px #4f378b7c;
+  background: -webkit-gradient(linear, left top, right top, from(#4f378b7c), color-stop(75%, #1C1B1F));
+  background: linear-gradient(90deg, #4f378b7c 0%, #1C1B1F 75%);
+  color: #E6E1E5;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    height: 0%;
+    -webkit-transform: translateX(-2.1rem);
+            transform: translateX(-2.1rem);
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    height: 0%;
+    -webkit-transform: translateX(-2.1rem);
+            transform: translateX(-2.1rem);
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+.diceInput {
+  background: #28272bf1;
+  border-radius: 0.5em;
+  margin-block: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+}
+
+.diceInput__wrapper {
+  padding: 0.5em 0em 0.5em 0.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 33em;
+}
+
+.diceInput__wrapper span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.diceInput__wrapper__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #E6E1E5;
+  color: #1C1B1F;
+  border-radius: 0.5em;
+  margin-inline: 0.25em;
+}
+
+.diceInput__wrapper__buttons__minus {
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  padding-inline: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.diceInput__wrapper__buttons__plus {
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  padding-inline: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.diceInput__wrapper__list {
+  background: #E6E1E5;
+  border-radius: 0.5em;
+  padding: 0.25em 0.75em;
+  outline: none;
+  border: none;
+  text-align: center;
+  margin-inline: 0.25em;
+  max-width: 5em;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.diceInput__wrapper__list:hover {
+  background: #e6e1e588;
+}
+
+.diceInput__wrapper__input {
+  background: #E6E1E5;
+  outline: none;
+  border: none;
+  text-align: center;
+  max-width: 2.5em;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  font-weight: bold;
+  font-size: 16px;
+  border-left: 2px solid #1C1B1F;
+  border-right: 2px solid #1C1B1F;
+}
+
+.diceInput__wrapper__input--alt {
+  padding-inline: 0.5em;
+  min-width: 28px;
+}
+
+.diceInput__wrapper__input:hover {
+  background: #e6e1e588;
+}
+
+.diceInput__wrapper__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.diceInput__wrapper__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.diceInput__wrapper__radios {
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.diceInput__wrapper__radios__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 0.25em;
+}
+
+.diceInput__wrapper__radios__element {
+  padding: 0.25em;
+  border: 2px solid #E6E1E5;
+  border-radius: 0.5em;
+  margin-inline: 0.25em;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  font-weight: bold;
+}
+
+.diceInput__wrapper__radios__element:hover {
+  border: solid 2px #e6e1e588;
+  color: #e6e1e588;
+}
+
+.diceInput__wrapper__radios__element--active {
+  background: #4F378B;
+  border: 2px solid #4F378B;
+}
+
+.diceInput__wrapper__radios__element--active:hover {
+  color: #E6E1E5;
+  background: #4f378b7c;
+  border: 2px solid #4f378b7c;
+}
+
+.diceInput__wrapper__radios__element input {
+  display: none;
+}
+
+@media screen and (min-width: 610px) {
+  .diceInput__remove {
+    min-width: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #E6E1E5;
+    color: #1C1B1F;
+    font-size: 1.5em;
+    cursor: pointer;
+    -webkit-transform: translateX(35px);
+            transform: translateX(35px);
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+    text-align: center;
+  }
+  .diceInput__remove svg {
+    -webkit-transition: 0.35s;
+    transition: 0.35s;
+  }
+  .diceInput__remove:hover {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    color: red;
+  }
+  .diceInput__remove:hover svg {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .diceInput__remove {
+    width: 5%;
+    font-size: 1.5em;
+  }
+  .diceInput__remove svg {
+    cursor: pointer;
+  }
+  .diceInput__wrapper {
+    width: 85%;
+  }
+  .diceInput__wrapper__list {
+    padding-block: 0.5em;
+    margin-block: 0.5em;
+  }
+  .diceInput__wrapper__buttons {
+    padding-block: 0.5em;
+    margin-block: 0.5em;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    height: 0%;
+    -webkit-transform: translateX(-2.1rem);
+            transform: translateX(-2.1rem);
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+.baseData {
+  background: #28272bf1;
+  border-radius: 0.5em;
+  margin-block: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  overflow: hidden;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  padding: 0.5em 0em 0.5em 0.75em;
+}
+
+.baseData p {
+  margin: 0;
+}
+
+.baseData__wrapper {
+  min-width: 8em;
+  text-align: center;
+}
+
+.baseData__wrapper__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #E6E1E5;
+  color: #1C1B1F;
+  border-radius: 0.5em;
+  margin-inline: 0.25em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25em;
+}
+
+.baseData__wrapper__buttons__number {
+  font-weight: bold;
+  width: 100%;
+  border-left: 2px solid #1C1B1F;
+  border-right: 2px solid #1C1B1F;
+  height: 1.5em;
+}
+
+.baseData__wrapper__buttons__minus {
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  padding-inline: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.baseData__wrapper__buttons__plus {
+  -ms-flex-item-align: center;
+      align-self: center;
+  cursor: pointer;
+  padding-inline: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.baseData__wrapper__list {
+  background: #E6E1E5;
+  border-radius: 0.5em;
+  padding: 0.25em 0.75em;
+  outline: none;
+  border: none;
+  text-align: center;
+  width: 6em;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  font-weight: bold;
+  font-size: 1.25em;
+  cursor: pointer;
+  height: 1.5em;
+}
+
+.baseData__wrapper__list:hover {
+  background: #e6e1e588;
+}
+
+@media screen and (max-width: 600px) {
+  .baseData {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+body {
+  margin: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1C1B1F;
+  color: #E6E1E5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.addNewRow {
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  color: #E6E1E5;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.addNewRow:hover {
+  color: #e6e1e588;
+}
+/*# sourceMappingURL=styles.css.map */

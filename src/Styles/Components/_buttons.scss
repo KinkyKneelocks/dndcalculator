@@ -1,0 +1,44 @@
+@import 'variables';
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+
+    &__element {
+        margin: 0.5em 0.2em;
+        border: solid 1px $fontcolor;
+        padding: 0.35em 0.75em;
+        border-radius: $radius;
+        cursor: pointer;
+        transition: $transition;
+        font-weight: bold;
+
+        &:hover {
+            border: solid 1px $fontcolor-hover;
+            color: $fontcolor-hover;
+        }
+
+        &--active {
+            background: $fillcolor;
+            border: solid 1px $fillcolor;
+
+            &:hover {
+                border: solid 1px $fillcolor-hover;
+                background: $fillcolor-hover;
+                color: $fontcolor
+            }
+        }
+
+        &--halfactive {
+            border: solid 1px $fillcolor;
+            background: linear-gradient(90deg, $fillcolor 0%, $bgcolor 75%);
+
+            &:hover {
+                border: solid 1px $fillcolor-hover;
+                background: linear-gradient(90deg, $fillcolor-hover 0%, $bgcolor 75%);
+                color: $fontcolor
+            }
+        }
+    }
+}
